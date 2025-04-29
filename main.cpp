@@ -45,9 +45,9 @@ int main() {
                     cout << "Opción no válida...\n";
                 }
 
-                // Verifica si la salud llega a 0
+                // Verifica si la vida llega a 0
                 if (salud <= 0) {
-                    cout << "¡Perdiste! Salud agotada.\n";
+                    cout << "¡Perdiste! Vida agotada.\n";
                     jugando = false; // Terminar el juego
                 } else {
                     // Nivel 2: Decisión sobre el camino a seguir
