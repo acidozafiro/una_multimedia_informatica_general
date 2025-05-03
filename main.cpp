@@ -64,7 +64,26 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXOkxxxOKXXXXXXXXXXXXXXXXXXXXXXKOxxxxOXW
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWKOkkkkkkO0KXXXXXXXXKK0OkkkOO0XWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNKOkxxxxxxxxxxxxkOO0KNWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNNNNWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-)" << endl; 
+
+    
+ __  __    ___     ___     ___    _____    ___              ___     ___     ___     ___    _____    ___     ___   
+|  \/  |  /   \   | _ \   |_ _|  |_   _|  / _ \     o O O  | _ )   |_ _|   / __|   / _ \  |_   _|  | __|   / __|  
+| |\/| |  | - |   |   /    | |     | |   | (_) |   o       | _ \    | |   | (_ |  | (_) |   | |    | _|    \__ \  
+|_|__|_|  |_|_|   |_|_\   |___|   _|_|_   \___/   TS__[O]  |___/   |___|   \___|   \___/   _|_|_   |___|   |___/  
+_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""| {======|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""| 
+"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'./o--000'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-' 
+   ___     ___     ___     ___     ___    _____    ___    _  _     ___     ___                                    
+  | _ \   | __|   / __|   / __|   /   \  |_   _|  /   \  | \| |   |   \   / _ \                                   
+  |   /   | _|    \__ \  | (__    | - |    | |    | - |  | .` |   | |) | | (_) |                                  
+  |_|_\   |___|   |___/   \___|   |_|_|   _|_|_   |_|_|  |_|\_|   |___/   \___/                                   
+_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|                                  
+"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'                                  
+   ___              ___    _   _    ___     ___     ____   _  _     ___    _____    ___                           
+  /   \     o O O  |   \  | | | |  | _ \   /   \   |_  /  | \| |   |_ _|  |_   _|  / _ \                          
+  | - |    o       | |) | | |_| |  |   /   | - |    / /   | .` |    | |     | |   | (_) |                         
+  |_|_|   TS__[O]  |___/   \___/   |_|_\   |_|_|   /___|  |_|\_|   |___|   _|_|_   \___/                          
+_|"""""| {======|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|                         
+"`-0-0-'./o--000'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-' )" << endl; 
     // Título
     cout << "¡Bienvenido a la Aventura en el Reino Hongo!\n";
     cout << "Introduce tu nombre: ";
@@ -72,10 +91,11 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNNNNWMMMMMMMMMMMMMMMM
 
     // Menú principal
     while (jugando) {
-        cout << "\nMenú Principal:\n";
+        system("clear");
+        cout << "\nMenú Principal:\n\n";
         cout << "1. Iniciar Aventura\n";
         cout << "2. Instrucciones\n";
-        cout << "3. Salir\n";
+        cout << "3. Salir\n\n";
         cout << "Elige una opción: ";
         cin >> opcion;
 
@@ -86,9 +106,9 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNNNNWMMMMMMMMMMMMMMMM
                 
                 // Nivel 1: Enfrentarse a un Goomba
                 cout << "Estás en el Reino Hongo..\n";
-                cout << "Un Goomba se acerca, ¿qué hacés?\n";
+                cout << "Un Goomba se acerca, ¿qué hacés?\n\n";
                 cout << "1. Saltar sobre el Goomba\n";
-                cout << "2. Huir hacia una tubería\n";
+                cout << "2. Huir hacia una tubería\n\n";
                 cout << "Elige una opción: ";
                 cin >> decision;
 
@@ -105,29 +125,83 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNNNNWMMMMMMMMMMMMMMMM
                 if (salud <= 0) {
                     cout << "¡Perdiste! Vida agotada.\n";
                     jugando = false; // Terminar el juego
+                    
                 } else {
+                    system("clear");
                     // Nivel 2: Decisión sobre el camino a seguir
-                    cout << "Tu vida actual es: " << salud << "\n";
-                    cout << "Ahora te enfrentarás a un dilema...\n";
+                    cout << "Tu vida actual es: " << salud << "\n\n";
+                    cout << "Ahora te enfrentarás a un dilema...\n\n";
                     cout << "Hay dos caminos: el camino del castillo de Bowser o el bosque misterioso.\n";
                     cout << "1. Ir al castillo de Bowser\n";
-                    cout << "2. Ir al bosque misterioso\n";
+                    cout << "2. Ir al bosque misterioso\n\n";
                     cout << "Elige una opción: ";
                     cin >> decision;
 
+                    // Castillo de Bowser
                     if (decision == 1) {
-                        cout << "Te enfrentas a Bowser en su castillo...\n";
-                        // Aquí podrías crear una batalla con Bowser, o que el jugador encuentre un poder extra.
-                    } else if (decision == 2) {
-                        cout << "El bosque misterioso es peligroso... Te encuentras con una estrella.\n";
-                    }
+                        system("clear");
+                        int saludJugador = 100
+                        int saludBowser = 80;
+                        int accion;
+                        bool enBatalla = true;
 
-                    // Continuar con más decisiones...
+                        cout << "¡Te enfrentas a Bowser en su castillo!\n";
+
+                        while (enBatalla) {
+                        cout << "\nTu salud: " << saludJugador << " | Salud de Bowser: " << saludBowser << "\n";
+                        cout << "¿Qué quieres hacer?\n\n";
+                        cout << "1. Saltar sobre Bowser (ataque normal)\n";
+                        cout << "2. Usar una estrella (ataque fuerte)\n";
+                        cout << "3. Curarte (+20 salud)\n\n";
+                        cout << "Elige tu acción: ";
+                        cin >> accion;
+
+                        switch(accion) {
+                        case 1:
+                        cout << "Saltaste sobre Bowser. Le quitas 10 de salud.\n";
+                        saludBowser -= 10;
+                        break;
+                        case 2:
+                        cout << "\n¡Usaste una estrella! Le haces 20 de daño.\n";
+                        saludBowser -= 20;
+                        break;
+                        case 3:
+                        cout << "\nTe curaste. +20 salud.\n";
+                        saludJugador += 20;
+                        if (saludJugador > 100) saludJugador = 100;
+                        break;
+                        default:
+                        cout << "\nAcción no válida, perdiste el turno.\n";
+                        break;
+                        }
+
+                        // Turno de Bowser
+                        if (saludBowser > 0) {
+                        cout << "Bowser ataca...\n";
+                        saludJugador -= 15;
+                        cout << "\nBowser te quita 15 de salud.\n";
+                        }
+
+                        // Verificar si alguien perdió
+                        if (saludJugador <= 0) {
+                        cout << "¡Perdiste la batalla! Bowser te venció.\n";
+                        enBatalla = false;
+                        } else if (saludBowser <= 0) {
+                        cout << "¡Ganaste! Has derrotado a Bowser.\n";
+                        enBatalla = false;
+                        }
+                        }
+                        
+                    // Decisión BOSQUE
+                    } else if (decision == 2) {
+                    cout << "El bosque misterioso es peligroso... Te encuentras con una estrella.\n";
+                    }
                 }
 
                 break;
             }
             case 2: {
+                system("clear");
                 // Instrucciones
                 cout << "\nInstrucciones:\n";
                 cout << "Usa las opciones numéricas para tomar decisiones en la aventura.\n";
@@ -135,6 +209,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNNNNWMMMMMMMMMMMMMMMM
                 break;
             }
             case 3: {
+                system("clear");
                 // Salir del juego
                 cout << "¡Gracias por jugar a la Aventura en el Reino Hongo! ¡Hasta luego, !" << nombre << ".\n";
                 jugando = false;
