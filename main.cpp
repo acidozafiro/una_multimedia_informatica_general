@@ -82,13 +82,15 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNNNNWMMMMMMMMMMMMMMMM
         switch(opcion) {
             case 1: {
                 // Iniciar la aventura
+                system("clear");
                 cout << "\n¡Comenzó la aventura, " << nombre << "...\n";
-                
+
+                do{
                 // Nivel 1: Enfrentarse a un Goomba
                 cout << "Estás en el Reino Hongo..\n";
-                cout << "Un Goomba se acerca, ¿qué hacés?\n";
+                cout << "Un Goomba se acerca, ¿qué hacés?\n\n";
                 cout << "1. Saltar sobre el Goomba\n";
-                cout << "2. Huir hacia una tubería\n";
+                cout << "2. Huir hacia una tubería\n\n";
                 cout << "Elige una opción: ";
                 cin >> decision;
 
@@ -98,9 +100,14 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNNNNWMMMMMMMMMMMMMMMM
                 } else if (decision == 2) {
                     cout << "Huís rápidamente hacia la tubería y llegas a un nuevo nivel.\n";
                 } else {
-                    cout << "Opción no válida...\n";
+                    system("clear");
+                    cout << "Opción no válida...\nElije nuevamente\n\n";
+                    cin.clear();
+                    cin.ignore();
                 }
+              } while (decision != 1 && decision != 2);
 
+                
                 // Verifica si la vida llega a 0
                 if (salud <= 0) {
                     cout << "¡Perdiste! Vida agotada.\n";
