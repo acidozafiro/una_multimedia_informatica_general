@@ -124,6 +124,11 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNNNNWMMMMMMMMMMMMMMMM
 
                     if (decision == 1) {
                         cout << "Te enfrentas a Bowser en su castillo...\n";
+                        cout << "Ingresarás al castillo de Bowser en...";
+                            for (int x = 3; x >= 1; x--) {
+                                cout << endl << x << endl;
+                                }
+
                         // Aquí podrías crear una batalla con Bowser, o que el jugador encuentre un poder extra.
                     } else if (decision == 2) {
                         cout << "El bosque misterioso es peligroso... Te encuentras con una estrella.\n";
