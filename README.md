@@ -1,4 +1,4 @@
-# IG-TP1-Aventura-conversacional
+# una_multimedia_informatica_general
 
 juego de "Elige tu propia aventura" inspirado en el universo de Mario Bros.
 
