@@ -1,3 +1,7 @@
+// Deira Luca
+// Moseinco Valentín
+// Santin Lucero
+
 #include <iostream>
 #include <string>
 using namespace std;
