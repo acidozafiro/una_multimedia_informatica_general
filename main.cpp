@@ -116,8 +116,49 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNNNNWMMMMMMMMMMMMMMMM
                 if (salud <= 0) {
                     cout << "¡Perdiste! Vida agotada.\n";
                     jugando = false; // Terminar el juego
+                };
+
+                do{
+                //Nivel 2. Enfrentamiento con Koopa Troopa
+                cout << "¡Has llegado a un nuevo nivel!\n\n";
+                cout << "A lo lejos puedes ver un Koopa Troopa de color verde.\n";
+                cout << "No parece muy amigable, pero si logras superarlo "; 
+                cout << "hay otra tubería esperándote...\n\n";
+
+                cout << "Presione ENTER para continuar...";
+                cin.ignore().get();
+
+                system("clear");
+                cout << "¡Cuidado " << nombre << "!\n";
+                cout << "¡Un Koopa Troopa verde se acerca rápidamente hacia ti!\n";
+                cout << "¿Que quieres hacer?\n\n";
+                cout << "1. Saltar para intentar esquivar al Koopa Troopa.\n";
+                cout << "2. Enfrentar la embestida.\n\n";
+                cout << "Elige una opción: ";
+                cin >> decision;
+
+                if (decision == 1){
+                    system("clear");
+                    cout << "Saltas y el Koopa Troopa pasa por debajo tuyo.\n";
+                    cout << "Ha continuado su camino a toda velocidad y al llegar al precipicio se ha caído.\n\n";
+                    cout << "Que suerte, has podido evitar su ataque.\n";
+                } else if(decision == 2){
+                    system("clear");
+                    cout << "¡El Koopa Tropa golpea y fuerte!\n";
+                    cout << "Pierdes 10 de vida.\n\n";
+                    cout << "Afortunadamente luego de golpearte ha seguido su ";
+                    cout << "camino y se ha caido por el precipicio.\n";
+                    salud -= 10.0;
+                    cout << "Tu nivel de vida ahora es de " << salud << ".";
                 } else {
-                    // Nivel 2: Decisión sobre el camino a seguir
+                    system("clear");
+                    cout << "Opción no válida...\nElija nuevamente\n\n";
+                    cin.clear();
+                    cin.ignore();
+                }
+            }while(decision != 1 && decision != 2);
+
+                    // Nivel 3: Decisión sobre el camino a seguir
                     cout << "Tu vida actual es: " << salud << "\n";
                     cout << "Ahora te enfrentarás a un dilema...\n";
                     cout << "Hay dos caminos: el camino del castillo de Bowser o el bosque misterioso.\n";
