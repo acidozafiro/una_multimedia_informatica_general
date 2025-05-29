@@ -75,13 +75,16 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNNNNWMMMMMMMMMMMMMMMM
     getline(cin, nombre);
 
     // Menú principal
-    while (jugando) {
-        cout << "\nMenú Principal:\n";
+    do{
+        system("clear");
+        cout << "\nMENÚ PRINCIPAL:\n\n";
         cout << "1. Iniciar Aventura\n";
         cout << "2. Instrucciones\n";
-        cout << "3. Salir\n";
+        cout << "3. Salir\n\n";
         cout << "Elige una opción: ";
         cin >> opcion;
+
+    while (jugando) {  
 
         switch(opcion) {
             case 1: {
@@ -92,7 +95,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNNNNWMMMMMMMMMMMMMMMM
                 do{
                 // Nivel 1: Enfrentarse a un Goomba
                 cout << "Estás en el Reino Hongo..\n";
-                cout << "Un Goomba se acerca, ¿qué hacés?\n\n";
+                cout << "Un Goomba se acerca, ¿Qué haces?\n\n";
                 cout << "1. Saltar sobre el Goomba\n";
                 cout << "2. Huir hacia una tubería\n\n";
                 cout << "Elige una opción: ";
@@ -100,26 +103,29 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNNNNWMMMMMMMMMMMMMMMM
 
                 if (decision == 1) {
                     salud -= 10.0; // Perdés algo de vida por no tener suficiente velocidad.
-                    cout << "Saltas sobre el Goomba, pero no lo lograste bien. Perdés 10 de vida.\n";
+                    system("clear");
+                    cout << "\nSaltas sobre el Goomba, pero no lo lograste bien. Pierdes 10 de vida.\n";
+                    cout << "Huyes, triste y desesperado por el miedo, hacia la tubería.\n\n";
                 } else if (decision == 2) {
-                    cout << "Huís rápidamente hacia la tubería y llegas a un nuevo nivel.\n";
+                    system("clear");
+                    cout << "\nHuyes rápidamente hacia la tubería.\n\n";
                 } else {
                     system("clear");
-                    cout << "Opción no válida...\nElije nuevamente\n\n";
+                    cout << "Opción no válida...\nElija nuevamente\n\n";
                     cin.clear();
                     cin.ignore();
                 }
               } while (decision != 1 && decision != 2);
 
-                
-                // Verifica si la vida llega a 0
-                if (salud <= 0) {
-                    cout << "¡Perdiste! Vida agotada.\n";
-                    jugando = false; // Terminar el juego
-                };
+              // Verifica si la vida llega a 0
+              if (salud <= 0) {
+                cout << "¡Perdiste! Vida agotada.\n";
+                jugando = false; // Terminar el juego
+            };
 
-                do{
+              do{
                 //Nivel 2. Enfrentamiento con Koopa Troopa
+                //system("clear");
                 cout << "¡Has llegado a un nuevo nivel!\n\n";
                 cout << "A lo lejos puedes ver un Koopa Troopa de color verde.\n";
                 cout << "No parece muy amigable, pero si logras superarlo "; 
@@ -130,7 +136,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNNNNWMMMMMMMMMMMMMMMM
 
                 system("clear");
                 cout << "¡Cuidado " << nombre << "!\n";
-                cout << "¡Un Koopa Troopa verde se acerca rápidamente hacia ti!\n";
+                cout << "¡El Koopa Troopa verde se acerca rápidamente hacia ti!\n";
                 cout << "¿Que quieres hacer?\n\n";
                 cout << "1. Saltar para intentar esquivar al Koopa Troopa.\n";
                 cout << "2. Enfrentar la embestida.\n\n";
@@ -158,7 +164,10 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNNNNWMMMMMMMMMMMMMMMM
                 }
             }while(decision != 1 && decision != 2);
 
+
                     // Nivel 3: Decisión sobre el camino a seguir
+                    system("clear");
+
                     cout << "Tu vida actual es: " << salud << "\n";
                     cout << "Ahora te enfrentarás a un dilema...\n";
                     cout << "Hay dos caminos: el camino del castillo de Bowser o el bosque misterioso.\n";
@@ -173,35 +182,53 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNNNNWMMMMMMMMMMMMMMMM
                             for (int x = 3; x >= 1; x--) {
                                 cout << endl << x << endl;
                                 }
+                        // Al llegar acá como no hay mas decisiones puse esta pausa y el jugando = false que
+                        // hace que vuelva al menu principal, pero despues lo sacamos cuando agreguemos cosas.
+                        cout << "Presione ENTER para continuar...";
+                        cin.ignore().get();
+                        jugando = false;        
 
                         // Aquí podrías crear una batalla con Bowser, o que el jugador encuentre un poder extra.
                     } else if (decision == 2) {
                         cout << "El bosque misterioso es peligroso... Te encuentras con una estrella.\n";
+                        // Acá lo mismo de arriba agregue la pausa y el jugando = false.
+                        cout << "Presione ENTER para continuar...";
+                        cin.ignore().get();
+                        jugando = false;        
                     }
 
                     // Continuar con más decisiones...
                 }
 
-                break;
-            }
+            break;
             case 2: {
                 // Instrucciones
+                system("clear");
                 cout << "\nInstrucciones:\n";
                 cout << "Usa las opciones numéricas para tomar decisiones en la aventura.\n";
-                cout << "El objetivo es rescatar a la Princesa Durazno y derrotar a Bowser.\n";
-                break;
+                cout << "El objetivo es rescatar a la Princesa Durazno y derrotar a Bowser.\n\n";
+
+                cout << "Presione ENTER para volver al menú principal...";
+                cin.ignore().get();
+                jugando = false;
             }
+            break;
             case 3: {
                 // Salir del juego
-                cout << "¡Gracias por jugar a la Aventura en el Reino Hongo! ¡Hasta luego, !" << nombre << ".\n";
+                system("clear");
+                cout << "\n¡Gracias por jugar a la Aventura en el Reino Hongo! ¡Hasta luego, " << nombre << "!\n\n";
                 jugando = false;
                 break;
             }
             default:
-                cout << "Opción no válida, intenta nuevamente.\n";
+                cout << "Opción no válida, intenta nuevamente.\n\n";
+                cin.clear();
+                cin.ignore();
                 break;
         }
     }
+    //Vuelve a empezar excepto que se elija la opción 3
+    }while(opcion != 3);
 
     return 0;
 }
