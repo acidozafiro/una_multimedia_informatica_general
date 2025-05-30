@@ -4,6 +4,8 @@
 
 #include <iostream>
 #include <string>
+#include <cstdlib> 
+#include <ctime>  
 using namespace std;
 
 int main() {
@@ -223,6 +225,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNNNNWMMMMMMMMMMMMMMMM
                                         cout << "."; 
                                     }
                                     cout << "\n";
+                                    srand(time(0));
                                     // Ataque
                                     int exito = rand() % 100;
                                     if (exito < 40) {
