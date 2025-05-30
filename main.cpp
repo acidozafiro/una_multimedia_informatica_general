@@ -177,18 +177,100 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNNNNWMMMMMMMMMMMMMMMM
                     cin >> decision;
 
                     if (decision == 1) {
-                        cout << "Te enfrentas a Bowser en su castillo...\n";
-                        cout << "Ingresarás al castillo de Bowser en...";
-                            for (int x = 3; x >= 1; x--) {
+                        cout << "Has ingresado al castillo de Bowser\n";
+                        cout << "Bowser tiene secuestrada a la princesa Durazno...\n";
+                        cout << "Vas a tener que pelear con el para salvarla.";
+                        cout << "La batalla con Bowser comenzará en...";
+                                for (int x = 3; x >= 1; x--) {
                                 cout << endl << x << endl;
                                 }
+                        bool finPelea = false;
+                        int saludBowser = 100;
+                            while (!finPelea) {
+                                cout << "¡Bowser viene a atacarte!\n";
+                                cout << "Elegí una de las siguientes opciones para enfrentarlo\n";
+                                cout << "1. Saltar sobre Bowser\n";
+                                cout << "2. Esquivarlo y correr alrededor para confundirlo\n";
+                                cin >> decision;
+                                if (decision == 1) {
+                                    cout << "Saltaste sobre Bowser y lograste lastimarlo un poco\n";
+                                    saludBowser -= 30;
+                                    cout << "Igualmente, logró contraatacar y te hizo algo de daño.\n";
+                                    salud -= 20; // Bowser contraataca
+                                    cout << "Salud de Bowser: " << saludBowser << endl;
+                                    cout << "Tu salud: " << salud << endl;
+                                } else if (decision == 2) {
+                                    cout << "Corrés alrededor de Bowser para confundirlo...\n";
+                                    cout << "Logras esquivar su ataque, pero te tropezás un poco.\n";
+                                    salud -= 10;
+                                    cout << "Tu salud: " << salud << endl;
+                                } else {
+                                    cout << "Opción inválida. Elegí 1 o 2.\n";
+                                }
+                                    while (salud > 70){
+                                cin.ignore().get();
+                                cout << "Continua la batalla...\n";
+                                cout << "Encontraste una flor de fuego en el castillo!\n";
+                                cout << "¿Cuál es tu próximo ataque? Elegí una de las opciones\n";
+                                cout << "1. Convertirte en FireMario y lanzar a Bowser una bola de fuego\n";   
+                                cout << "2. Pegarle a Bowser con la flor\n";
+                                cin >> decision;
+                                if (decision == 1) {                                  
+                                    cout << "¡¡Te transformaste en FIRE MARIO!! 🔥\n";
+                                    cout << "Preparate para lanzar una bola de fuego...\n";
+                                    cout << "...\n";    
+                                    for (int i = 0; i < 3; i++) {
+                                        cout << "."; 
+                                    }
+                                    cout << "\n";
+                                    // Ataque
+                                    int exito = rand() % 100;
+                                    if (exito < 40) {
+                                        cout << "¡Fallaste el tiro! Bowser esquiva con agilidad.\n";
+                                        cout << "Te ataca con su aliento de fuego.\n";
+                                        salud -= 25;
+                                    } else {
+                                        cout << "La bola de fuego quema a Bowser.\n";
+                                        saludBowser -= 70;
+                                        cout << "¡Bowser ruge de furia!\n";
+                                    }
+
+                                    cout << "Salud de Bowser: " << saludBowser << endl;
+                                    cout << "Tu salud: " << salud << endl;
+                                }
+                                else if (decision == 2) {
+                                    cout << "Le pegás a Bowser con la flor como si fuera una espada...\n";
+                                    cout << "No es muy efectivo, pero lo descolocás por un momento.\n";
+                                    saludBowser -= 20;
+                                    cout << "Bowser se enoja y te empuja con fuerza.\n";
+                                    salud -= 10;
+
+                                    cout << "Salud de Bowser: " << saludBowser << endl;
+                                    cout << "Tu salud: " << salud << endl;
+                                }
+}
+                                if (saludBowser <= 0) {
+                                    cout << "\n¡Derrotaste a Bowser! ¡La princesa Durazno está a salvo!\n";
+                                    cout << "¡GANASTE EL JUEGO!\n";
+                                    finPelea = true;
+                                    jugando = false;
+                                } else if (salud <= 0) {
+                                    cout << "\nBowser te ha derrotado...\n";
+                                    cout << "FIN DEL JUEGO\n";
+                                    finPelea = true;
+                                    jugando = false;
+                                }
+                            }
+                        }
+                                                        }
+                                                    }
+
                         // Al llegar acá como no hay mas decisiones puse esta pausa y el jugando = false que
                         // hace que vuelva al menu principal, pero despues lo sacamos cuando agreguemos cosas.
                         cout << "Presione ENTER para continuar...";
                         cin.ignore().get();
                         jugando = false;        
-
-                        // Aquí podrías crear una batalla con Bowser, o que el jugador encuentre un poder extra.
+        // esto me parece al pedo
                     } else if (decision == 2) {
                         cout << "El bosque misterioso es peligroso... Te encuentras con una estrella.\n";
                         // Acá lo mismo de arriba agregue la pausa y el jugando = false.
@@ -197,7 +279,6 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNNNNWMMMMMMMMMMMMMMMM
                         jugando = false;        
                     }
 
-                    // Continuar con más decisiones...
                 }
 
             break;
