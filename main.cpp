@@ -13,61 +13,36 @@ int main() {
     float salud = 100.0; // Vida de Mario
     string nombre; // Nombre del jugador
 cout << R"(
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNK0OkxxddddddxxkO0XWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWKkdlc:,,''''''''''''',,;clox0XWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWKkoc;'',;;;;;;;;;;;;;;;;;;;;;,,',:ldONMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWKdc;',;;;;;;;,',,;:ccllcc:;,'',;;;;;;,',:okNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMXxc,',;;;;;;;,';colcONWWWWWWXx:coc;',;;;;;;;,';o0WMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWKo;',;;;;;;;;,':xKNx,';l0WMMWOl;',xNXx:',;;;;;;;;',ckNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMW0o,',;;;;;;;;;',xNMNo,;cc;;lddl;;cc;,oNMNx,';;;;;;;;;,':kNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMKo,';;;;;;;;;;;';OWMXl,:c,';::,,;:;',::,lXMWO,';;;;;;;;;;,':OWMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMNx;',;;;;;;;;;;;,'dWMXl,:c,;xo,;cc;,lx:,c:,cKMWo.;;;;;;;;;;;;,,lKWMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMW0c',;;;;;;;;;;;;;,'kMXc,:c;,kWW0l;;cOWMk,;c:,cKWd',;;;;;;;;;;;;;',xNMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMNx,';;;;;;;;;;;;;;;,'oKc'cc:,oNMMMWXXNMMMWd,:cc':Oc';;;;;;;;;;;;;;;,'cKMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMXl',;;;;;;;;;;;;;;;;;,'cl:;;'cXMMMMMMMMMMMMXc';,:o:',;;;;;;;;;;;;;;;;;';kWMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMW0:';;;;;;;;;;;;;;;;;;;;,':dxdo0WNNNNWWWWWWMMMKolxd:',;;;;;;;;;;;;;;;;;;;,'dNMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMWO;';;;;;;;;;;;;;;;;;;;,,''..;llcc::::cccccllllloo;..',,;;;;;;;;;;;;;;;;;;;,'oXMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMWk,';;;;;;;;;;;;;;,,''''''''',,,,;;;;;;;;;;;;,,,,,'''''''''''',,;;;;;;;;;;;;;,'lXMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMO;';;;;;;;;;;;,'''''',,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,,''''''',;;;;;;;;;;,'oNMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMM0:';;;;;;;;;,'..'',;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,''''',;;;;;;;;,'dWMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMNl.;;;;;;;;'..',;;;;;;;;;;;;;,,,'''',,,,,,,,,,;,,,,,''',,,;;;;;;;;;;;;,'..';;;;;;;',OMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMx',;;;;;,'..,;;;;;;;;;,''.....,lodxxxkkOOOOOOOOOOkkkxdc.  .....',;;;;;;;;,'.',;;;;;.cXMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMXc.;;;;;,..,;;;;;;,'...        .,dKXXXXXXXXXXXXXXXXXXOc.          ..',,;;;;;,..';;;;,,kMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMM0,';;;;'.';;;;;,';:'              ;OXXXXXXXXXXXXXXXXx'             .oo:,,;;;;;'.';;;,'dWMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMk,';;;,..;;;;,,:dOO,   .;loool:'.  ;0XXXXXXXXXXXXXXk'   .;ldkxdl;. .oXKkl,,;;;;..;;;;.lWMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMO,';;;,..;;,'ckKXXd. ,d0XXXXXXXKxc..oXXXXXXXXXXXXXXl .;o0XXXXXXXKk:.cKXXXOc',;,..;;;;.oWMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMK;';;;;'....,OXXXXx;oKXXXXXX000KXXOlxXXXXXXXXXXXXXKl;xKK000KXXXXXXKxxKXXXXx....',;;;,'xMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMWo.,;;;;'...;OXXXXKKXXXXKkdxxxxxod0XXXXXXXXXXXXXXXXK0xodxxxxdx0XXXXXXXXXXXx'...';;;;';0MMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMM0;';;;'..,.;OXXXXXXXXXOdd0NNkoc;';d0XXXXXXXXXXXXXXk:',:ldKWXxldKXXXXXXXXXx'.,..';;,.oWMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMWd.';,..',.,OXXXXXXXXklOWW0c,:c:::,lKXXXXXXXXXXXXk;;c:cc;;xNMXooKXXXXXXXXx'.,'..,;':KMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMNOdolcc'.'''.,kXXXXXXXOlkWM0;;c,';;'',xXXXXXXXXXXX0:'',:,.::,dWMKodXXXXXXXXx'.,'...,'lkKWMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMNdlOKXXXx'.''.,OXXXXXXXdlXMNl,:' .do. .cKXXXXXXXXXXx'  :k: .;;;OMMxl0XXXXXXXx'.''..ckOOxoxXMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMkcOX00KX0:.',.,OXXXXXXXooNMX:,:.       ;0K0OOOOOO0Kd.       ':,xMMklOXXXXXXXx'.''.;0X0kO0ooXMMMMMMMMMMMMMM
-MMMMMMMMMMMMMWdlkoddddkc.',.,OXXXXXXXooNMNc,:.      .;dxdxxxxxxddl'.      ,:,kMMkl0XXXXXXXx'.,'.,oddxdoxlxWMMMMMMMMMMMMM
-MMMMMMMMMMMMMNoclxXXKkl'.',.;OXXXXXXXkl0MWx,:,  .,lxOKXXXXXXXXXXXK0ko:.  .:,cXMNooKXXXXXXXk,.,'.,xKXXXdlllXMMMMMMMMMMMMM
-MMMMMMMMMMMMMNo;lOXXXKd'.,'.cKXO0XXXXKooXMNd,,':xKXXXXXXXXXXXXXXXXXXXX0l'',c0MWklOXXXXKO0X0:.''.;xOXXXxlclKMMMMMMMMMMMMM
-MMMMMMMMMMMMMWx;ckXXkoc..,.,kKo..cOKXX0doxO0l,dKXXXXXXXXXXXXXXXXXXXXXXXXO:;k0kddOXXXKx:.,xXx,.'.;xodKXdlcoNMMMMMMMMMMMMM
-MMMMMMMMMMMMMMO:;dX0lxO;.''dKl.   .;oOKXKOxd;oKXXXXXXXXXXXXXXXXXXXXXXXXXX0c:dk0XX0kl,.   .dKo...lXOcx0ollkMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMNocOXOlxXo..cKd.       .':cldo:xXXXXXXXXXXXXXXXXXXXXXXXXXXXXx:odlc;'.       'k0:.,kXOlxKOldNMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMKldXXkldOl;kK:               .xXXXXXXXXXXXXXXXXXXXXXXXXXXXXx.               lXd,d0xldKKooXMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMM0lxXX0xd:c0K:                lKXXXXXXXXXXXXXXXXXXXXXXXXXXKl               .oXOccddOXKdoKMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMM0ldKXXXooKXk'               .xXXXXXXXXXXXXXXXXXXXXXXXXXXx.               :0X0loXXX0ddXMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMKooOXXolKXXOc.              .oKXXXXXXXXXXXXXXXXXXXXXXKd.              'o0XX0ldXXOoxNMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMNkodkocOXXXXOo:,.            ,d0XXXXXXXXXXXXXXXXXXKx:.          .',cd0XXXXOcoOxd0WMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMN0xo;dXXXXXXXK0o.            .;ldk0KKXXXXXKK0kdc,.           'xKXXXXXXXXd:dOKWMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMWxcOXXXXXXXXKx,               ..'',,,,,''..             .;kXXXXXXXXXkcOMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMNxlOXXXXXXXXX0xl:;,;::,                       .;c;;,;:lkKXXXXXXXXXkckWMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMNklkXXXXXXXXXXXXXXX0xdl;'.      ....      .';ldkKXXXXXXXXXXXXXXKxlOWMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMW0ooOXXXXXXXXXXXXXKkxxxoc;,,,;cdxdo:;,,;:lddxxOKXXXXXXXXXXXXXOooKMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMNOdxOXXXXXXXXXXXXXXXXK0OkkxxxxxxxxkkOO0KXXXXXXXXXXXXXXXXKxod0WMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMW0kkO0XXXXXXXXXXXXXXXKOxxxxkkkkkxxxx0XXXXXXXXXXXXXXKkddxKWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN0OkkOKXXXXXXXXXXXXKOkkxxxxxxxkO0KXXXXXXXXXXX0xddx0NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN0kxxkOKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXKkdddkKWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXOkxxxOKXXXXXXXXXXXXXXXXXXXXXXKOxxxxOXWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWKOkkkkkkO0KXXXXXXXXKK0OkkkOO0XWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNKOkxxxxxxxxxxxxkOO0KNWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNNNNWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+ ███▄ ▄███▓ ▄▄▄       ██▀███   ██▓▄▄▄█████▓ ▒█████      ▄▄▄▄    ██▓ ▄████  ▒█████  ▄▄▄█████▓▓█████   ██████ 
+▓██▒▀█▀ ██▒▒████▄    ▓██ ▒ ██▒▓██▒▓  ██▒ ▓▒▒██▒  ██▒   ▓█████▄ ▓██▒██▒ ▀█▒▒██▒  ██▒▓  ██▒ ▓▒▓█   ▀ ▒██    ▒ 
+▓██    ▓██░▒██  ▀█▄  ▓██ ░▄█ ▒▒██▒▒ ▓██░ ▒░▒██░  ██▒   ▒██▒ ▄██▒██▒██░▄▄▄░▒██░  ██▒▒ ▓██░ ▒░▒███   ░ ▓██▄   
+▒██    ▒██ ░██▄▄▄▄██ ▒██▀▀█▄  ░██░░ ▓██▓ ░ ▒██   ██░   ▒██░█▀  ░██░▓█  ██▓▒██   ██░░ ▓██▓ ░ ▒▓█  ▄   ▒   ██▒
+▒██▒   ░██▒ ▓█   ▓██▒░██▓ ▒██▒░██░  ▒██▒ ░ ░ ████▓▒░   ░▓█  ▀█▓░██░▒▓███▀▒░ ████▓▒░  ▒██▒ ░ ░▒████▒▒██████▒▒
+░ ▒░   ░  ░ ▒▒   ▓▒█░░ ▒▓ ░▒▓░░▓    ▒ ░░   ░ ▒░▒░▒░    ░▒▓███▀▒░▓  ░▒   ▒ ░ ▒░▒░▒░   ▒ ░░   ░░ ▒░ ░▒ ▒▓▒ ▒ ░
+░  ░      ░  ▒   ▒▒ ░  ░▒ ░ ▒░ ▒ ░    ░      ░ ▒ ▒░    ▒░▒   ░  ▒ ░ ░   ░   ░ ▒ ▒░     ░     ░ ░  ░░ ░▒  ░ ░
+░      ░     ░   ▒     ░░   ░  ▒ ░  ░      ░ ░ ░ ▒      ░    ░  ▒ ░ ░   ░ ░ ░ ░ ▒    ░         ░   ░  ░  ░  
+       ░         ░  ░   ░      ░               ░ ░      ░       ░       ░     ░ ░              ░  ░      ░  
+                                                             ░                                              
+ ██▀███  ▓█████   ██████ ▄████▄   ▄▄▄     ▄▄▄█████▓ ▄▄▄      ███▄    █ ▓█████▄  ▒█████                      
+▓██ ▒ ██▒▓█   ▀ ▒██    ▒▒██▀ ▀█  ▒████▄   ▓  ██▒ ▓▒▒████▄    ██ ▀█   █ ▒██▀ ██▌▒██▒  ██▒                    
+▓██ ░▄█ ▒▒███   ░ ▓██▄  ▒▓█    ▄ ▒██  ▀█▄ ▒ ▓██░ ▒░▒██  ▀█▄ ▓██  ▀█ ██▒░██   █▌▒██░  ██▒                    
+▒██▀▀█▄  ▒▓█  ▄   ▒   ██▒▓▓▄ ▄██▒░██▄▄▄▄██░ ▓██▓ ░ ░██▄▄▄▄██▓██▒  ▐▌██▒░▓█▄   ▌▒██   ██░                    
+░██▓ ▒██▒░▒████▒▒██████▒▒ ▓███▀ ░ ▓█   ▓██▒ ▒██▒ ░  ▓█   ▓██▒██░   ▓██░░▒████▓ ░ ████▓▒░                    
+░ ▒▓ ░▒▓░░░ ▒░ ░▒ ▒▓▒ ▒ ░ ░▒ ▒  ░ ▒▒   ▓▒█░ ▒ ░░    ▒▒   ▓▒█░ ▒░   ▒ ▒  ▒▒▓  ▒ ░ ▒░▒░▒░                     
+  ░▒ ░ ▒░ ░ ░  ░░ ░▒  ░ ░ ░  ▒     ▒   ▒▒ ░   ░      ▒   ▒▒ ░ ░░   ░ ▒░ ░ ▒  ▒   ░ ▒ ▒░                     
+  ░░   ░    ░   ░  ░  ░ ░          ░   ▒    ░        ░   ▒     ░   ░ ░  ░ ░  ░ ░ ░ ░ ▒                      
+   ░        ░  ░      ░ ░ ░            ░  ░              ░  ░        ░    ░        ░ ░                      
+                        ░                                               ░                                   
+ ▄▄▄         ▓█████▄  █    ██  ██▀███  ▄▄▄     ▒███████▒ ███▄    █  ██▓▄▄▄█████▓ ▒█████                     
+▒████▄       ▒██▀ ██▌ ██  ▓██▒▓██ ▒ ██▒████▄   ▒ ▒ ▒ ▄▀░ ██ ▀█   █ ▓██▒▓  ██▒ ▓▒▒██▒  ██▒                   
+▒██  ▀█▄     ░██   █▌▓██  ▒██░▓██ ░▄█ ▒██  ▀█▄ ░ ▒ ▄▀▒░ ▓██  ▀█ ██▒▒██▒▒ ▓██░ ▒░▒██░  ██▒                   
+░██▄▄▄▄██    ░▓█▄   ▌▓▓█  ░██░▒██▀▀█▄ ░██▄▄▄▄██  ▄▀▒   ░▓██▒  ▐▌██▒░██░░ ▓██▓ ░ ▒██   ██░                   
+ ▓█   ▓██▒   ░▒████▓ ▒▒█████▓ ░██▓ ▒██▒▓█   ▓██▒███████▒▒██░   ▓██░░██░  ▒██▒ ░ ░ ████▓▒░                   
+ ▒▒   ▓▒█░    ▒▒▓  ▒ ░▒▓▒ ▒ ▒ ░ ▒▓ ░▒▓░▒▒   ▓▒█░▒▒ ▓░▒░▒░ ▒░   ▒ ▒ ░▓    ▒ ░░   ░ ▒░▒░▒░                    
+  ▒   ▒▒ ░    ░ ▒  ▒ ░░▒░ ░ ░   ░▒ ░ ▒░ ▒   ▒▒ ░░▒ ▒ ░ ▒░ ░░   ░ ▒░ ▒ ░    ░      ░ ▒ ▒░                    
+  ░   ▒       ░ ░  ░  ░░░ ░ ░   ░░   ░  ░   ▒  ░ ░ ░ ░ ░   ░   ░ ░  ▒ ░  ░      ░ ░ ░ ▒                     
+      ░  ░      ░       ░        ░          ░  ░ ░ ░             ░  ░               ░ ░                     
+              ░                                ░                                             
 )" << endl; 
     // Título
     cout << "¡Bienvenido a la Aventura en el Reino Hongo!\n";
@@ -126,6 +101,25 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNNNNWMMMMMMMMMMMMMMMM
               do{
                 //Nivel 2. Enfrentamiento con Koopa Troopa
                 //system("clear");
+                  cout << R"(             
+                                            .-.
+                     +                    ,;'666`:.
+     .:'6          _..._            _           66`:.
+   .:'6          ,' (-) `.         | |           66`:.
+   `:.6        .'\  .-.  / `.      |_|            666.:'
+    ::66`;.   /(O) \:  :/(O)\       O           666::
+   .:'666::  /       db      \             `:.666666`:.
+ .:'6666.:' (.-   )     _ (  -.)             ::666666`:.
+ ::66666.:    `-;_   (W)   ,-'              `:.6666666::
+ `:.666:'        `'------'                 `::6666666.:'
+  `:.66.:_..-"-.._ ||  ||                    `:.6666.:'
+_..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
+                   ||UU||                  `'''---.:::'_
+                ,'//!!!!\\`.                     `:.  `'
+                 `\....../            }/
+                   UUUUUU               (o))))~~))<
+                                        ^ " " " `
+                  )" << endl;
                 cout << "¡Has llegado a un nuevo nivel!\n\n";
                 cout << "A lo lejos puedes ver un Koopa Troopa de color verde.\n";
                 cout << "No parece muy amigable, pero si logras superarlo "; 
@@ -177,6 +171,33 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNNNNWMMMMMMMMMMMMMMMM
                     cin >> decision;
 
                     if (decision == 1) {
+                        cout << R"(
+                                                                                                                                                sssssssss
+                                                                       |°-_                                         sssssssssssss
+                     sssssss                                           |                                                sssss
+                 ssssssssssssss                                        X
+                    sssss                                     |°-_    /.\       |°-_
+                                                              |      =====      |
+                                                              X      [ .:]      X
+                                                             / \     [ O ]     / \                        ssssssss
+                                                             | |     [ Q ]     | |                           sssssssss
+                ssss                                        =====   [:...:]   =====                             sss
+              sssssssss                                     [.: ]__[-------]__[ :.]
+                sssssss                                  [ :]ii  ii iii ii ii iiii[.  ]
+                                                      [ :]iiii iiii iiii iiii iiii iii[.  ]                                     
+                                                   [ :]iii iiiii iiiiiiiiiiiiiii ii iii ii[.  ]                               
+                                                   II[[    []    []     [II]    []   []    ]]II             
+                                                   IIIIIII[ :]--III III III III II--[. ]IIIIIII
+                                                   IIIIIII[ :]--III III mmm III II--[. ]IIIIIII
+                                                   IIIIIII[ :]--III III mmm III II--[. ]IIIIIII
+                                                   IIIIIII[ :]--III III mmm III II--[. ]IIIIIII               
+                                                 ~~//[ :]. :  ...   :    ...    : :   . [.  ]\\~~
+                                                     __   __¨°| .    .  ||| .      :|¨°__  --
+                    ___  ---    ____              -- __ O°  ...______"""______....   O° -----  --           ___  ---    ____
+   ___  ---    ____     ____----       --__  - -  -     ___  ---    ____     ____----       --__  -  ___  ---    ____     ____----       --__  -
+                  ___  ---    ____               °°´´ --__    --    --__     -___        __-   _°°´´         ___  ---    ____
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                            )" << endl;
                         cout << "Te enfrentas a Bowser en su castillo...\n";
                         cout << "Ingresarás al castillo de Bowser en...";
                             for (int x = 3; x >= 1; x--) {
@@ -190,14 +211,42 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNNNNWMMMMMMMMMMMMMMMM
 
                         // Aquí podrías crear una batalla con Bowser, o que el jugador encuentre un poder extra.
                     } else if (decision == 2) {
-                        cout << "El bosque misterioso es peligroso... Te encuentras con una estrella.\n";
+                        cout << R"(
+                                                                   .         ;                                               .         ;
+                                          .         °  
+             .              .              ;%     ;;   
+                ,           ,                :;%  %;   
+                :         ;                   :;%;'     .,                   ;°     ;;    ,           ,   
+       ,.         %;     %;            ;        °;'    ,;
+,        ;       ;%;  %%;        ,     %;    ;%;    ,°'
+          °;         %°%;      ,  ;       °%;  ;°.   ,°;' 
+           ;°;      %;        ;%;        ° ;°;  ,°;'
+  .         `%    ;%;     #;'         `;%%;.%;'                                                   ;%     ;;    ,           ,   
+                `:;#.    ;%%. °°;        %; ;@%;%'
+                `:%;.  :;°°#;          #;@%;'
+                 `@%:.  :;%.         ;°°%;'   
+                    `@%.  `;#%.      ;°°%;                    ;%     ;;    ,           ,   
+        .              #`@%%. `@%%    ;#%;        
+                        ;@%. :@%%  %@@%;       
+                  .      %@##%%%""%%:;                                                         .                         ,
+    .                      #@%%%%%:;;                    ;    ,           ,    
+                            #@%%%::;                                          ___
+                            #@%%%(o);  . '                                   / o \_____       
+                            #@%%%;:(.,'                                      \___/""""- 
+            ,           `.. #@%%%::;                                          . . .                     ,  
+                           `#@%%%%::;                                       **********
+                            #@%%%(o)::;                                     {[[[[]]]]}
+     .                     .#@%%%%%%%::;                                   {{[[[[]]]]}}
+                           ;#@%%%%%%%%:;.                                 {{{[[[[]]]]}}}
+                          ;#@%%%%%%%%%%;;.                               {{{{[[[[]]]]}}}}
+                      ...;#@%%%%%%%%%%%%;,..  .         ;   .           {{{{{[[[[]]]]}}}}}             ;%     ;;    ,           ,                :;%  %;  
+                            )" << endl;                        
+                            cout << "El bosque misterioso es peligroso... Te encuentras con una llave.\n";
                         // Acá lo mismo de arriba agregue la pausa y el jugando = false.
                         cout << "Presione ENTER para continuar...";
                         cin.ignore().get();
                         jugando = false;        
                     }
-
-                    // Continuar con más decisiones...
                 }
 
             break;
