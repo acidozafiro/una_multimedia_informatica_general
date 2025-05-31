@@ -10,7 +10,7 @@ int main() {
     bool jugando = true; // Estado del juego
     int opcion; // Para el menú principal
     int decision; // Para las decisiones dentro del juego
-    float salud = 100.0; // Vida de Mario
+    float salud = 5; // Vida de Mario
     string nombre; // Nombre del jugador
 cout << R"(
  ███▄ ▄███▓ ▄▄▄       ██▀███   ██▓▄▄▄█████▓ ▒█████      ▄▄▄▄    ██▓ ▄████  ▒█████  ▄▄▄█████▓▓█████   ██████ 
@@ -77,7 +77,7 @@ cout << R"(
                 cin >> decision;
 
                 if (decision == 1) {
-                    salud -= 10.0; // Perdés algo de vida por no tener suficiente velocidad.
+                    salud -- ; // Perdés algo de vida por no tener suficiente velocidad.
                     system("clear");
                     cout << "\nSaltas sobre el Goomba, pero no lo lograste bien. Pierdes 10 de vida.\n";
                     cout << "Huyes, triste y desesperado por el miedo, hacia la tubería.\n\n";
@@ -101,7 +101,16 @@ cout << R"(
               do{
                 //Nivel 2. Enfrentamiento con Koopa Troopa
                 //system("clear");
-                  cout << R"(             
+                cout << "¡Has llegado a un nuevo nivel!\n\n";
+                cout << "A lo lejos puedes ver un Koopa Troopa de color verde.\n";
+                cout << "No parece muy amigable, pero si logras superarlo "; 
+                cout << "hay otra tubería esperándote...\n\n";
+
+                cout << "Presione ENTER para continuar...";
+                cin.ignore().get();
+
+                system("clear");
+                cout << R"(             
                                             .-.
                      +                    ,;'666`:.
      .:'6          _..._            _           66`:.
@@ -120,15 +129,6 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
                    UUUUUU               (o))))~~))<
                                         ^ " " " `
                   )" << endl;
-                cout << "¡Has llegado a un nuevo nivel!\n\n";
-                cout << "A lo lejos puedes ver un Koopa Troopa de color verde.\n";
-                cout << "No parece muy amigable, pero si logras superarlo "; 
-                cout << "hay otra tubería esperándote...\n\n";
-
-                cout << "Presione ENTER para continuar...";
-                cin.ignore().get();
-
-                system("clear");
                 cout << "¡Cuidado " << nombre << "!\n";
                 cout << "¡El Koopa Troopa verde se acerca rápidamente hacia ti!\n";
                 cout << "¿Que quieres hacer?\n\n";
@@ -148,7 +148,7 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
                     cout << "Pierdes 10 de vida.\n\n";
                     cout << "Afortunadamente luego de golpearte ha seguido su ";
                     cout << "camino y se ha caido por el precipicio.\n";
-                    salud -= 10.0;
+                    salud -- ;
                     cout << "Tu nivel de vida ahora es de " << salud << ".";
                 } else {
                     system("clear");
@@ -241,11 +241,14 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
                           ;#@%%%%%%%%%%;;.                               {{{{[[[[]]]]}}}}
                       ...;#@%%%%%%%%%%%%;,..  .         ;   .           {{{{{[[[[]]]]}}}}}             ;%     ;;    ,           ,                :;%  %;  
                             )" << endl;                        
-                            cout << "El bosque misterioso es peligroso... Te encuentras con una llave.\n";
-                        // Acá lo mismo de arriba agregue la pausa y el jugando = false.
+                        cout << "El bosque misterioso es peligroso... Te encuentras con una llave.\n";
+                        cout << "No hay mucho para hacer aquí... Sigues hacia el castillo.\n";
                         cout << "Presione ENTER para continuar...";
                         cin.ignore().get();
-                        jugando = false;        
+                        cout << "Parece que Bowser está dormido...\n";
+                        cout << "¿Qué es ese llanto que se escucha desde el otro lado de la habitación?...¿Será?\n";
+                        cout << "¿¿¿DURAZNITO???\n";
+                        cout << "¡Está encerrada! ¡Rápido! ¡Probá la llave!\n";
                     }
                 }
 
