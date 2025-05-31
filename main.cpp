@@ -172,7 +172,7 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
 
                     if (decision == 1) {
                         cout << R"(
-                                                                                                                                                sssssssss
+                                                                                                                     sssssssss
                                                                        |°-_                                         sssssssssssss
                      sssssss                                           |                                                sssss
                  ssssssssssssss                                        X
