@@ -71,7 +71,7 @@ _|"""""| {======|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""
                         system("clear");
                         cout << "\nSaltás sobre el Goomba, pero no lo lograste bien. Pierdes 10 de vida.\n";
                         cout << "Tu nivel de vida ahora es de " << salud << ".\n";
-                        cout << "Huís, triste y desesperado por el miedo, hacia la tubería.\n\n";
+                        cout << "Huís, triste y desesperadx por el miedo, hacia la tubería.\n\n";
                     } else if (decision == 2) {
                         system("clear");
                         cout << "\nHuís rápidamente hacia la tubería.\n\n";
@@ -237,7 +237,7 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
                         cout << "¡¡Te transformaste en FIRE MARIO!!\n";
                         cout << "Preparate para lanzar una bola de fuego en...\n";
                         for (int i = 0; i < 3; i++) {
-                            cout << ".";
+                            cout << ".\n";
                         }
                         cout << "\n";
                         srand(time(0));
@@ -269,12 +269,17 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
                             cout << "Tu salud: " << salud << endl;
                             cout << "Salud de Bowser: " << saludBowser << endl;
                         }
+                        cout << "\n¡Tenés una segunda oportunidad!\n";
+                        cout << "¿Cuál es tu próximo ataque? Elegí una de las opciones\n";
+                        cout << "1. Convertirte en Fire Mario y lanzar una bola de fuego\n";
+                        cout << "2. Pegarle a Bowser con la flor\n";
+                    cin >> decision;
                         if (decision == 1) {
                         system("clear");
                         cout << "¡¡Te transformaste en FIRE MARIO!!\n";
                         cout << "Preparate para lanzar una bola de fuego en...\n";
                         for (int i = 0; i < 3; i++) {
-                            cout << ".";
+                            cout << ".\n";
                         }
                         cout << "\n";
                         srand(time(0));
