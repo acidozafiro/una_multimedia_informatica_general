@@ -18,7 +18,7 @@ int main() {
     string nombre; // Nombre del jugador
 
     // Título
-    cout << R "(
+    cout << R"(
    __  __    ___     ___     ___    _____    ___              ___     ___     ___     ___    _____    ___     ___   
   |  \/  |  /   \   | _ \   |_ _|  |_   _|  / _ \     o O O  | _ )   |_ _|   / __|   / _ \  |_   _|  | __|   / __|  
   | |\/| |  | - |   |   /    | |     | |   | (_) |   o       | _ \    | |   | (_ |  | (_) |   | |    | _|    \__ \  
@@ -39,7 +39,7 @@ _|"""""| {======|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""
 "`-0-0-'./o--000'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-' 
     )" << endl ;
     cout << "¡Bienvenido a la Aventura en el Reino Hongo!\n";
-    cout << "Introduce tu nombre: ";
+    cout << "Introducí tu nombre: ";
     getline(cin, nombre);
 
     // Menú principal
@@ -49,7 +49,7 @@ _|"""""| {======|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""
         cout << "1. Iniciar Aventura\n";
         cout << "2. Instrucciones\n";
         cout << "3. Salir\n\n";
-        cout << "Elige una opción: ";
+        cout << "Eligí una opción: ";
         cin >> decision;
 
         switch (decision) {
@@ -60,23 +60,25 @@ _|"""""| {======|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""
 
                     // Nivel 1: Enfrentarse a un Goomba
                     cout << "Estás en el Reino Hongo..\n";
-                    cout << "Un Goomba se acerca, ¿Qué haces?\n\n";
+                    cout << "Un Goomba se acerca, ¿Qué hacés?\n\n";
                     cout << "1. Saltar sobre el Goomba\n";
                     cout << "2. Huir hacia una tubería\n\n";
-                    cout << "Elige una opción: ";
+                    cout << "Eligí una opción: ";
                     cin >> decision;
 
                     if (decision == 1) {
                         salud -= 10;
                         system("clear");
-                        cout << "\nSaltas sobre el Goomba, pero no lo lograste bien. Pierdes 10 de vida.\n";
-                        cout << "Huyes, triste y desesperado por el miedo, hacia la tubería.\n\n";
+                        cout << "\nSaltás sobre el Goomba, pero no lo lograste bien. Pierdes 10 de vida.\n";
+                        cout << "Tu nivel de vida ahora es de " << salud << ".\n";
+                        cout << "Huís, triste y desesperado por el miedo, hacia la tubería.\n\n";
                     } else if (decision == 2) {
                         system("clear");
-                        cout << "\nHuyes rápidamente hacia la tubería.\n\n";
+                        cout << "\nHuís rápidamente hacia la tubería.\n\n";
+                        cout << "Tu nivel de vida es de " << salud << ".\n";
                     } else {
                         system("clear");
-                        cout << "Opción no válida...\nElija nuevamente\n\n";
+                        cout << "Opción no válida...\nElegí nuevamente\n\n";
                         cin.clear() ;
                         cin.ignore();
                     }
@@ -84,14 +86,14 @@ _|"""""| {======|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""
                 system("clear");
 
                     // Nivel 2: Enfrentarse a un Koopa Troopa
-                    cout << "¡Has llegado a un nuevo nivel!\n\n";
-                    cout << "A lo lejos puedes ver un Koopa Troopa de color verde.\n";
-                    cout << "No parece muy amigable, pero si logras superarlo ";
+                    cout << "¡Llegaste a un nuevo nivel!\n\n";
+                    cout << "A lo lejos podés ver un Koopa Troopa de color verde.\n";
+                    cout << "No parece muy amigable, pero si lográs superarlo ";
                     cout << "hay otra tubería esperándote...\n\n";
-                    cout << "Presione ENTER para continuar...";
+                    cout << "Presioná ENTER para continuar...";
                     cin.ignore().get();
                     system("clear");
-                    cout << R "(
+                    cout << R"(
                                             .-.
                      +                    ,;'666`:.
      .:'6          _..._            _           66`:.
@@ -113,7 +115,7 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
                         
                     cout << "¡Cuidado " << nombre << "!\n";
                     cout << "¡El Koopa Troopa verde se acerca rápidamente hacia ti!\n";
-                    cout << "¿Que quieres hacer?\n\n";
+                    cout << "¿Que querés hacer?\n\n";
                     cout << "1. Saltar para intentar esquivar al Koopa Troopa.\n";
                     cout << "2. Enfrentar la embestida.\n\n";
                     cout << "Elige una opción: ";
@@ -121,27 +123,28 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
 
                     if (decision == 1) {
                         system("clear");
-                        cout << "Saltas y el Koopa Troopa pasa por debajo tuyo.\n";
+                        cout << "Saltás y el Koopa Troopa pasa por debajo tuyo.\n";
                         cout << "Ha continuado su camino a toda velocidad y al llegar al precipicio se ha caído.\n\n";
                         cout << "Que suerte, has podido evitar su ataque.\n";
+                        cout << "Tu nivel de vida es de " << salud << ".\n";
                     } else if (decision == 2) {
                         system("clear");
                         cout << "¡El Koopa Tropa golpea y fuerte!\n";
-                        cout << "Pierdes 10 de vida.\n\n";
-                        cout << "Afortunadamente luego de golpearte ha seguido su ";
+                        cout << "Perdés 10 de vida.\n\n";
+                        cout << "Afortunadamente, luego de golpearte ha seguido su ";
                         cout << "camino y se ha caido por el precipicio.\n";
                         salud -= 10;
                         cout << "Tu nivel de vida ahora es de " << salud << ".\n";
                     } else {
                         system("clear");
-                        cout << "Opción no válida...\nElija nuevamente\n\n";
+                        cout << "Opción no válida...\nElegí nuevamente\n\n";
                         cin.clear() ;
                         cin.ignore();
                     }
 
                     // Nivel 3: Enfrentar a Bowser
                     system("clear");
-                    cout << R "(
+                    cout << R"(
                                                                                                                      sssssssss
                                                                        |°-_                                         sssssssssssss
                      sssssss                                           |                                                sssss
@@ -172,11 +175,12 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
                     cout << "Llegaste a un castillo aterrador\n";
                     cout << "Aquí dentro, Bowser tiene secuestrada a tu amada, la princesa Duraznito...\n";
                     cout << "Vas a tener que pelear con él para salvarla.\n";
+                    cout << "Tu nivel de vida hasta ahora es de " << salud << ".\n";
                     cout << "La batalla comenzará en...\n";
                     for (int x = 3; x >= 1; x--) {
                      cout << endl << x << endl;
                     }
-                    cout << R "(
+                    cout << R"(
                 _/(               .       .               )\_
               .~   ~-.             )     (            .-~   ~.
            .-~        ~-._        ((\___/))       _.-~        ~-.
@@ -201,7 +205,8 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
                     if (decision == 1) {
                         system("clear");
                         cout << "Saltaste sobre Bowser y lograste lastimarlo un poco\n";
-                        saludBowser -= 30;
+                        saludBowser -= 40;
+                        cout << "El nivel de vida de Bowser ahora es de " << saludBowser << ".\n";
                         cout << "Igualmente, logró contraatacar y te hizo algo de daño.\n";
                         salud -= 20;
                         } 
@@ -210,6 +215,7 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
                         cout << "Corrés alrededor de Bowser para confundirlo...\n";
                         cout << "Lográs esquivar su ataque, pero te tropezás un poco.\n";
                         salud -= 10;
+                        cout << "Tu nivel de vida ahora es de " << salud << ".\n";
                         } else {
                         system("clear");
                         cout << "Opción inválida. Se considera que no hiciste nada.\n";
@@ -240,18 +246,59 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
                              cout << "¡Fallaste el tiro! Bowser esquiva con agilidad.\n";
                             cout << "Te ataca con su aliento de fuego.\n";
                             salud -= 25;
+                            cout << "Tu nivel de vida ahora es de " << salud << ".\n";
                             } else {
                                 cout << "¡La bola de fuego impacta a Bowser!\n";
                                 cout << "¡Bowser ruge de furia!\n";
                                 saludBowser -= 70;
+                                cout << "El nivel de vida de Bowser ahora es de " << saludBowser << ".\n";
                             }
                         } else if (decision == 2) {
                             system("clear");
                             cout << "Le pegás a Bowser con la flor como si fuera una espada...\n";
                             cout << "No es muy efectivo, pero lo descolocás por un momento.\n";
                             cout << "Bowser se enoja y te empuja con fuerza.\n";
-                            saludBowser -= 20;
+                            saludBowser -= 30;
+                            cout << "El nivel de vida de Bowser ahora es de " << saludBowser << ".\n";
                             salud -= 10;
+                            cout << "Tu nivel de vida ahora es de " << salud << ".\n";
+                        } else {
+                            system("clear");
+                            cout << "Opción inválida. Bowser te ataca mientras dudás.\n";
+                            salud -= 30;
+                            cout << "Tu salud: " << salud << endl;
+                            cout << "Salud de Bowser: " << saludBowser << endl;
+                        }
+                        if (decision == 1) {
+                        system("clear");
+                        cout << "¡¡Te transformaste en FIRE MARIO!!\n";
+                        cout << "Preparate para lanzar una bola de fuego en...\n";
+                        for (int i = 0; i < 3; i++) {
+                            cout << ".";
+                        }
+                        cout << "\n";
+                        srand(time(0));
+                        int exito = rand() % 100;
+                        if (exito < 30) {
+                             cout << "¡Fallaste el tiro! Bowser esquiva con agilidad.\n";
+                            cout << "Te ataca con su aliento de fuego.\n";
+                            salud -= 25;
+                            cout << "Tu nivel de vida ahora es de " << salud << ".\n";
+                            } else {
+                                cout << "¡La bola de fuego impacta a Bowser!\n";
+                                cout << "¡Bowser ruge de furia!\n";
+                                saludBowser -= 70;
+                                cout << "El nivel de vida de Bowser ahora es de " << saludBowser << ".\n";
+                            }
+                        } else if (decision == 2) {
+                            system("clear");
+                            cout << "Le pegás a Bowser con la flor como si fuera una espada...\n";
+                            cout << "No es muy efectivo, pero lo descolocás por un momento.\n";
+                            cout << "Bowser se enoja y te empuja con fuerza.\n";
+                            saludBowser -= 30;
+                            cout << "El nivel de vida de Bowser ahora es de " << saludBowser << ".\n";
+                            salud -= 10;
+                            cout << "Tu nivel de vida ahora es de " << salud << ".\n";
                         } else {
                             system("clear");
                             cout << "Opción inválida. Bowser te ataca mientras dudás.\n";
@@ -262,7 +309,7 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
                     // Fin de juego
                     if (saludBowser <= 0 && salud > 0) {
                     system("clear");
-                    cout << R "(
+                    cout << R"(
                  __
                 /   `.
                / \   `\\  \
@@ -279,9 +326,9 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
            /'       `\                        {{[[[[]]]]}}
           /           \                      {{{[[[[]]]]}}}
          (((((((()))))))                    {{{{[[[[]]]]}}}}
-        ......_____......                  {{{{{[[[[]]]]}}}}} 
+        ......_____......                  {{{{{[[[[]]]]}}}}} )"
                     << endl ;
-                    cout << "\n¡Derrotaste a Bowser! ¡La princesa Durazno está a salvo!\n";
+                    cout << "\n¡Derrotaste a Bowser! " << nombre << " ¡La princesa Durazno está a salvo!\n";
                     cout << "¡GANASTE EL JUEGO!\n";
                     jugando = false;
                     } else if (salud <= 0 && saludBowser > 0 ) {
@@ -316,7 +363,7 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
             }
 
             default:
-                cout << "Opción no válida, intenta nuevamente.\n\n";
+                cout << "Opción no válida, " << nombre << " intentá nuevamente.\n\n"; 
                 cin.clear() ;
                 cin.ignore();
                 break;
