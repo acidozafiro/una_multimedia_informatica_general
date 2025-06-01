@@ -339,15 +339,20 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
                     cout << "\n¡Derrotaste a Bowser! " << nombre << " ¡La princesa Durazno está a salvo!\n";
                     cout << "¡GANASTE EL JUEGO!\n";
                     jugando = false;
+                        cin.ignore().get();
+                        break;
                     } else if (salud <= 0 && saludBowser > 0 ) {
                     cout << "\nBowser te ha derrotado...\n";
                     cout << "FIN DEL JUEGO\n";
                     jugando = false;
+                        cin.ignore().get();
+                        break;
                     } else {
                     cout << "\nBowser ha quedado herido, pero logró escapar por ahora...\n";
                     cout << "¡Continuarás esta aventura en una próxima misión!\n";
                     cout << "Presione ENTER para continuar..." << endl;
                     cin.ignore().get();
+                    break;
                     }
                 system("clear");
             }
