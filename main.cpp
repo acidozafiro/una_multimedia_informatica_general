@@ -311,6 +311,9 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
                             cout << "Tu salud: " << salud << endl;
                             cout << "Salud de Bowser: " << saludBowser << endl;
                         }
+                        cout << "\nRESULTADO DE LA BATALLA\n";
+                    cout << "Tu salud: " << salud << "\n";
+                    cout << "Salud de Bowser: " << saludBowser << "\n";
                     // Fin de juego
                     if (saludBowser <= 0 && salud > 0) {
                     system("clear");
