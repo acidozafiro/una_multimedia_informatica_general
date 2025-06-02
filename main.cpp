@@ -387,12 +387,14 @@ _  ---    ____               °°´´ --__    --    --__     -___        __-   _
                     << endl ;
                     cout << "\n¡Derrotaste a Bowser!, " << nombre << "! ¡La princesa Durazno está a salvo!\n";
                     cout << "¡GANASTE EL JUEGO!\n";
-                        cin.ignore().get();
+                    cout << "Presione ENTER para continuar..." << endl;
+                    cin.ignore().get();
                         break;
                     } else if (salud <= 0 && saludBowser > 0 ) {
                     cout << "\nBowser te ha derrotado...\n";
                     cout << "FIN DEL JUEGO\n";
-                        cin.ignore().get();
+                    cout << "Presione ENTER para continuar..." << endl;    
+                    cin.ignore().get();
                         break;
                     } else {
                     cout << "\nBowser ha quedado herido, pero logró escapar por ahora...\n";
