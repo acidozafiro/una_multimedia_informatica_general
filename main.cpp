@@ -254,10 +254,10 @@ _  ---    ____               °°´´ --__    --    --__     -___        __-   _
 
                 do{
                     cout << "\n¡Continúa la batalla!\n";
-                    cout << "¡Encontraste una flor de fuego en el castillo!\n";
+                    cout << "¡Encontraste una flor de fuego en el castillo!\n\n";
                     cout << "¿Cuál es tu próximo ataque? Elegí una de las opciones\n";
                     cout << "1. Convertirte en Fire Mario y lanzar una bola de fuego\n";
-                    cout << "2. Pegarle a Bowser con la flor\n";
+                    cout << "2. Pegarle a Bowser con la flor\n\n";
                     cout << "Elegí una opción: ";
                     cin >> decision;
                     
@@ -265,7 +265,7 @@ _  ---    ____               °°´´ --__    --    --__     -___        __-   _
                         system("clear");
                         cout << "¡¡Te transformaste en FIRE MARIO!!\n";
                         cout << "Preparate para lanzar una bola de fuego en...\n";
-                        for (int i = 0; i < 3; i++) {
+                        for (int i = 3; i <= 1; i--) {
                             cout << endl << i << endl;
                         }
                         cout << "\n";
@@ -316,7 +316,7 @@ _  ---    ____               °°´´ --__    --    --__     -___        __-   _
                         system("clear");
                         cout << "¡¡Te transformaste en FIRE MARIO!!\n";
                         cout << "Preparate para lanzar una bola de fuego en...\n";
-                        for (int i = 0; i < 3; i++) {
+                        for (int i = 3; i <= 1; i--) {
                             cout << endl << i << endl;
                         }
                         cout << "\n";
