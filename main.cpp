@@ -15,6 +15,7 @@ int main() {
     string nombre; // Nombre del jugador
 
     // Título
+    system("clear");
     cout << R"(
    __  __    ___     ___     ___    _____    ___              ___     ___     ___     ___    _____    ___     ___   
   |  \/  |  /   \   | _ \   |_ _|  |_   _|  / _ \     o O O  | _ )   |_ _|   / __|   / _ \  |_   _|  | __|   / __|  
