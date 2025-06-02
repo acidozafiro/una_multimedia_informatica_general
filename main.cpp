@@ -271,6 +271,7 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
                             cout << "Te ataca con su aliento de fuego.\n";
                             salud -= 25;
                             cout << "Tu nivel de vida ahora es de " << salud << ".\n";
+                              cin.ignore().get();
                             } else {
                                 cout << "¡La bola de fuego impacta a Bowser!\n";
                                 cout << "¡Bowser ruge de furia!\n";
@@ -292,6 +293,8 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
                             salud -= 30;
                             cout << "Tu salud: " << salud << endl;
                             cout << "Salud de Bowser: " << saludBowser << endl;
+                            cin.clear();
+                            cin.ignore();
                         }
                         cout << "\n¡Tenés una segunda oportunidad!\n";
                         cout << "¿Cuál es tu próximo ataque? Elegí una de las opciones\n";
@@ -313,11 +316,14 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
                             cout << "Te ataca con su aliento de fuego.\n";
                             salud -= 25;
                             cout << "Tu nivel de vida ahora es de " << salud << ".\n";
+                            cin.ignore.get();
                             } else {
                                 cout << "¡La bola de fuego impacta a Bowser!\n";
                                 cout << "¡Bowser ruge de furia!\n";
                                 saludBowser -= 70;
                                 cout << "El nivel de vida de Bowser ahora es de " << saludBowser << ".\n";
+                            cin.clear();
+                            cin.ignore();
                             }
                         } else if (decision == 2) {
                             system("clear");
@@ -328,12 +334,15 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
                             cout << "El nivel de vida de Bowser ahora es de " << saludBowser << ".\n";
                             salud -= 10;
                             cout << "Tu nivel de vida ahora es de " << salud << ".\n";
+                            cin.ignore.get();
                         } else {
                             system("clear");
                             cout << "Opción inválida. Bowser te ataca mientras dudás.\n";
                             salud -= 30;
                             cout << "Tu salud: " << salud << endl;
                             cout << "Salud de Bowser: " << saludBowser << endl;
+                            cin.clear();
+                            cin.ignore();
                         }
                         cout << "\nRESULTADO DE LA BATALLA\n";
                     cout << "Tu salud: " << salud << "\n";
