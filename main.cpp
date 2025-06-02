@@ -245,6 +245,7 @@ _  ---    ____               °°´´ --__    --    --__     -___        __-   _
                         salud -= 30;
                         cout << "Tu salud: " << salud << endl;
                         cout << "Salud de Bowser: " << saludBowser << endl;
+                        cout << "¡Cuidado con lo que escribís!\n";    
                         cout << "\nPresioná ENTER para continuar...";
                         cin.ignore().get();
                     }
@@ -255,6 +256,7 @@ _  ---    ____               °°´´ --__    --    --__     -___        __-   _
                     cout << "¿Cuál es tu próximo ataque? Elegí una de las opciones\n";
                     cout << "1. Convertirte en Fire Mario y lanzar una bola de fuego\n";
                     cout << "2. Pegarle a Bowser con la flor\n";
+                    cout << "Elegí una opción: ";
                     cin >> decision;
                     
                     if (decision == 1) {
@@ -301,7 +303,8 @@ _  ---    ____               °°´´ --__    --    --__     -___        __-   _
                         cout << "¿Cuál es tu próximo ataque? Elegí una de las opciones\n";
                         cout << "1. Convertirte en Fire Mario y lanzar una bola de fuego\n";
                         cout << "2. Pegarle a Bowser con la flor\n";
-                    cin >> decision;
+                        cout << "Elegí una opción: ";
+                        cin >> decision;
                         if (decision == 1) {
                         system("clear");
                         cout << "¡¡Te transformaste en FIRE MARIO!!\n";
