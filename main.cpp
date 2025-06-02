@@ -425,6 +425,8 @@ _  ---    ____               °°´´ --__    --    --__     -___        __-   _
             }
 
             default:
+                cin.clear();
+                cin.ignore();
                 cout << "Opción no válida, " << nombre << " intentá nuevamente.\n\n";
                 cout << "Presione ENTER para volver al menú principal";
                 cin.ignore().get();
