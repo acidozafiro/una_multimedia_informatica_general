@@ -191,6 +191,8 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
                     }
                     cout << "Presioná ENTER para continuar...";
                     cin.ignore().get();
+
+            do{
                     system("clear");
                     cout << R"(
                 _/(               .       .               )\_
@@ -212,6 +214,7 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
                     cout << "Elegí una de las siguientes opciones para enfrentarlo\n";
                     cout << "1. Saltar sobre Bowser\n";
                     cout << "2. Esquivarlo y correr alrededor para confundirlo\n";
+                    cout << "Elegí una opción: ";
                     cin >> decision;
                     
                     if (decision == 1) {
@@ -219,23 +222,32 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
                         cout << "Saltaste sobre Bowser y lograste lastimarlo un poco\n";
                         saludBowser -= 40;
                         cout << "El nivel de vida de Bowser ahora es de " << saludBowser << ".\n";
-                        cout << "Igualmente, logró contraatacar y te hizo algo de daño.\n";
+                        cout << "Igualmente, logró contraatacar y te hizo algo de daño.\n\n";
                         salud -= 20;
+                        cout << "Presioná ENTER para continuar...";
+                        cin.ignore().get();
                         } 
                         else if (decision == 2) {
                         system("clear");
                         cout << "Corrés alrededor de Bowser para confundirlo...\n";
                         cout << "Lográs esquivar su ataque, pero te tropezás un poco.\n";
                         salud -= 10;
-                        cout << "Tu nivel de vida ahora es de " << salud << ".\n";
+                        cout << "Tu nivel de vida ahora es de " << salud << ".\n\n";
+                        cout << "Presioná ENTER para continuar...";
+                        cin.ignore().get();    
                         } else {
                         system("clear");
+                        cin.clear();
+                        cin.ignore();    
                         cout << "Opción inválida. Se considera que no hiciste nada.\n";
                         cout << "Bowser te golpea.\n";
                         salud -= 30;
                         cout << "Tu salud: " << salud << endl;
                         cout << "Salud de Bowser: " << saludBowser << endl;
+                        cout << "\nPresioná ENTER para continuar...";
+                        cin.ignore().get();
                     }
+            }while (decision != 1 && decision != 2);
 
                     cout << "\n¡Continúa la batalla!\n";
                     cout << "¡Encontraste una flor de fuego en el castillo!\n";
