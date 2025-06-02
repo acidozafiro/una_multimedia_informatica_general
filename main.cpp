@@ -154,32 +154,32 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
                     // Nivel 3: Enfrentar a Bowser
                     system("clear");
                     cout << R"(
-                                                                                                                     sssssssss
-                                                                       |°-_                                         sssssssssssss
-                     sssssss                                           |                                                sssss
-                 ssssssssssssss                                        X
-                    sssss                                     |°-_    /.\       |°-_
-                                                              |      =====      |
-                                                              X      [ .:]      X
-                                                             / \     [ O ]     / \                        ssssssss
-                                                             | |     [ Q ]     | |                           sssssssss
-                ssss                                        =====   [:...:]   =====                             sss
-              sssssssss                                     [.: ]__[-------]__[ :.]
-                sssssss                                  [ :]ii  ii iii ii ii iiii[.  ]
-                                                      [ :]iiii iiii iiii iiii iiii iii[.  ]                                     
-                                                   [ :]iii iiiii iiiiiiiiiiiiiii ii iii ii[.  ]                               
-                                                   II[[    []    []     [II]    []   []    ]]II             
-                                                   IIIIIII[ :]--III III III III II--[. ]IIIIIII
-                                                   IIIIIII[ :]--III III mmm III II--[. ]IIIIIII
-                                                   IIIIIII[ :]--III III mmm III II--[. ]IIIIIII
-                                                   IIIIIII[ :]--III III mmm III II--[. ]IIIIIII               
-                                                 ~~//[ :]. :  ...   :    ...    : :   . [.  ]\\~~
-                                                     __   __¨°| .    .  ||| .      :|¨°__  --
-                    ___  ---    ____              -- __ O°  ...______"""______....   O° -----  --           ___  ---    ____
-   ___  ---    ____     ____----       --__  - -  -     ___  ---    ____     ____----       --__  -  ___  ---    ____     ____----       --__  -
-                  ___  ---    ____               °°´´ --__    --    --__     -___        __-   _°°´´         ___  ---    ____
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                                                                     sssss
+                                                   |°-_                                           ssssssssss
+ sssssss                                           |                                                sssss
+sssssssssss                                        X
+sssss                                     |°-_    /.\       |°-_
+                                          |      =====      |
+                                          X      [ .:]      X
+                                         / \     [ O ]     / \                            ssss
+                                         | |     [ Q ]     | |                           sssssssss
+                                        =====   [:...:]   =====                             sss
+                                        [.: ]__[-------]__[ :.]
+                                     [ :]ii  ii iii ii ii iiii[.  ]
+                                  [ :]iiii iiii iiii iiii iiii iii[.  ]                                     
+      sss                      [ :]iii iiiii iiiiiiiiiiiiiii ii iii ii[.  ]                               
+    ssssss                     II[[    []    []     [II]    []   []    ]]II             
+       ss                      IIIIIII[ :]--III III III III II--[. ]IIIIIII
+                               IIIIIII[ :]--III III mmm III II--[. ]IIIIIII
+                               IIIIIII[ :]--III III mmm III II--[. ]IIIIIII
+                               IIIIIII[ :]--III III mmm III II--[. ]IIIIIII               
+                             ~~//[ :]. :  ...   :    ...    : :   . [.  ]\\~~
+                                  __   __¨°| .    .  ||| .      :|¨°__  --
+___  ---    ____              -- __ O°  ...______"""______....   O° -----  --           ___  ---    ____
+    ____----       --__  - -  -     ___  ---    ____     ____----       --__  -  ___  ---    ____     ____----      
+_  ---    ____               °°´´ --__    --    --__     -___        __-   _°°´´         ___  ---    ____
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                     )" << endl ;
                     cout << "Llegaste a un castillo aterrador\n";
                     cout << "Aquí dentro, Bowser tiene secuestrada a tu amada, la princesa Duraznito...\n";
@@ -353,9 +353,9 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
                     cout << R"(
                  __
                 /   `.
-               / \   `\\  \
-              /___\    /\
-            (((( ))))
+               / \   `\\  \         ¡GRACIAS MARITO, 
+              /___\    /\             ME SALVASTE!
+            (((( ))))                DAME UN BESO <3
            (((' . ')))
            /((( U )))\                              .
           /    \ /    \                        ,___/_\___, 
@@ -367,7 +367,8 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
            /'       `\                        {{[[[[]]]]}}
           /           \                      {{{[[[[]]]]}}}
          (((((((()))))))                    {{{{[[[[]]]]}}}}
-        ......_____......                  {{{{{[[[[]]]]}}}}} )"
+        ......_____......                  {{{{{[[[[]]]]}}}}} 
+                        )"
                     << endl ;
                     cout << "\n¡Derrotaste a Bowser!, " << nombre << "! ¡La princesa Durazno está a salvo!\n";
                     cout << "¡GANASTE EL JUEGO!\n";
