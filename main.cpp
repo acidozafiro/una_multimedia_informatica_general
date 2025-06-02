@@ -85,7 +85,7 @@ _|"""""| {======|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""
                         system("clear");
                         cout << "Opción no válida...\nElegí nuevamente\n\n";
                         cin.clear() ;
-                        cin.ignore();
+                        cin.ignore();}
                     }while (decision != 1 && decision !=2);
 
                 system("clear");
@@ -97,8 +97,10 @@ _|"""""| {======|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""
                     cout << "hay otra tubería esperándote...\n\n";
                     cout << "Presioná ENTER para continuar...";
                     cin.ignore().get();
-                    system("clear");
-                    cout << R"(
+
+                  do{
+                      system("clear");
+                      cout << R"(
                                             .-.
                      +                    ,;'666`:.
      .:'6          _..._            _           66`:.
@@ -116,9 +118,7 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
                  `\....../            }/
                    UUUUUU               (o))))~~))<
                                         ^ " " " `
-                    )" << endl ;
-
-                  do{  
+                    )" << endl ; 
                     cout << "¡Cuidado " << nombre << "!\n";
                     cout << "¡El Koopa Troopa verde se acerca rápidamente hacia ti!\n";
                     cout << "¿Que querés hacer?\n\n";
@@ -149,7 +149,7 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
                         system("clear");
                         cout << "Opción no válida...\nElegí nuevamente\n\n";
                         cin.clear() ;
-                        cin.ignore();
+                        cin.ignore();}
                     }while (decision != 1 && decision != 2);
 
                     // Nivel 3: Enfrentar a Bowser
