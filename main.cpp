@@ -348,7 +348,7 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
          (((((((()))))))                    {{{{[[[[]]]]}}}}
         ......_____......                  {{{{{[[[[]]]]}}}}} )"
                     << endl ;
-                    cout << "\n¡Derrotaste a Bowser! " << nombre << " ¡La princesa Durazno está a salvo!\n";
+                    cout << "\n¡Derrotaste a Bowser!, " << nombre << "! ¡La princesa Durazno está a salvo!\n";
                     cout << "¡GANASTE EL JUEGO!\n";
                         cin.ignore().get();
                         break;
