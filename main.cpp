@@ -251,6 +251,7 @@ _  ---    ____               °°´´ --__    --    --__     -___        __-   _
                     }
             }while (decision != 1 && decision != 2);
 
+                do{
                     cout << "\n¡Continúa la batalla!\n";
                     cout << "¡Encontraste una flor de fuego en el castillo!\n";
                     cout << "¿Cuál es tu próximo ataque? Elegí una de las opciones\n";
@@ -264,7 +265,7 @@ _  ---    ____               °°´´ --__    --    --__     -___        __-   _
                         cout << "¡¡Te transformaste en FIRE MARIO!!\n";
                         cout << "Preparate para lanzar una bola de fuego en...\n";
                         for (int i = 0; i < 3; i++) {
-                            cout << ".\n";
+                            cout << endl << i << endl;
                         }
                         cout << "\n";
                         srand(time(0));
@@ -292,13 +293,18 @@ _  ---    ____               °°´´ --__    --    --__     -___        __-   _
                             cout << "Tu nivel de vida ahora es de " << salud << ".\n";
                         } else {
                             system("clear");
+                            cin.clear();
+                            cin.ignore();
                             cout << "Opción inválida. Bowser te ataca mientras dudás.\n";
                             salud -= 30;
                             cout << "Tu salud: " << salud << endl;
                             cout << "Salud de Bowser: " << saludBowser << endl;
-                            cin.clear();
-                            cin.ignore();
+                            cout << "\nPresioná ENTER para continuar...";
+                            cin.ignore().get();
                         }
+                }while (decision != 1 && decision != 2);
+
+                do{
                         cout << "\n¡Tenés una segunda oportunidad!\n";
                         cout << "¿Cuál es tu próximo ataque? Elegí una de las opciones\n";
                         cout << "1. Convertirte en Fire Mario y lanzar una bola de fuego\n";
@@ -310,7 +316,7 @@ _  ---    ____               °°´´ --__    --    --__     -___        __-   _
                         cout << "¡¡Te transformaste en FIRE MARIO!!\n";
                         cout << "Preparate para lanzar una bola de fuego en...\n";
                         for (int i = 0; i < 3; i++) {
-                            cout << ".\n";
+                            cout << endl << i << endl;
                         }
                         cout << "\n";
                         srand(time(0));
@@ -341,14 +347,18 @@ _  ---    ____               °°´´ --__    --    --__     -___        __-   _
                             cin.ignore().get();
                         } else {
                             system("clear");
+                            cin.clear();
+                            cin.ignore();
                             cout << "Opción inválida. Bowser te ataca mientras dudás.\n";
                             salud -= 30;
                             cout << "Tu salud: " << salud << endl;
                             cout << "Salud de Bowser: " << saludBowser << endl;
-                            cin.clear();
-                            cin.ignore();
+                            cout << "\nPresioná ENTER para continuar...";
+                            cin.ignore().get();
                         }
-                        cout << "\nRESULTADO DE LA BATALLA\n";
+                } while (decision != 1 && decision != 2);
+                
+                    cout << "\nRESULTADO DE LA BATALLA\n";
                     cout << "Tu salud: " << salud << "\n";
                     cout << "Salud de Bowser: " << saludBowser << "\n";
                     // Fin de juego
