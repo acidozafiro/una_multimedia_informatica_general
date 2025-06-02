@@ -224,6 +224,7 @@ _  ---    ____               °°´´ --__    --    --__     -___        __-   _
                         cout << "El nivel de vida de Bowser ahora es de " << saludBowser << ".\n";
                         cout << "Igualmente, logró contraatacar y te hizo algo de daño.\n\n";
                         salud -= 20;
+                        cout << "Tu nivel de vida ahora es de " << salud << ".\n\n";
                         cout << "Presioná ENTER para continuar...";
                         cin.ignore().get();
                         } 
