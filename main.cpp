@@ -11,10 +11,7 @@ using namespace std;
 int main() {
     bool jugando = true; // Estado del juego
     bool finPelea = false; // Para la pelea con Bowser
-    //int opcion; // Para el menú principal
     int decision; // Para las decisiones dentro del juego
-    float salud = 100; // Vida de Mario
-    float saludBowser = 100; // Vida de Bowser
     string nombre; // Nombre del jugador
 
     // Título
@@ -44,6 +41,8 @@ _|"""""| {======|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""
 
     // Menú principal
     do {
+     float salud = 100; // Vida de Mario
+     float saludBowser = 100; // Vida de Bowser
         system("clear");
         cout << "\nMENÚ PRINCIPAL:\n\n";
         cout << "1. Iniciar Aventura\n";
