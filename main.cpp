@@ -316,7 +316,7 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
                             cout << "Te ataca con su aliento de fuego.\n";
                             salud -= 25;
                             cout << "Tu nivel de vida ahora es de " << salud << ".\n";
-                            cin.ignore.get();
+                            cin.ignore().get();
                             } else {
                                 cout << "¡La bola de fuego impacta a Bowser!\n";
                                 cout << "¡Bowser ruge de furia!\n";
@@ -334,7 +334,7 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
                             cout << "El nivel de vida de Bowser ahora es de " << saludBowser << ".\n";
                             salud -= 10;
                             cout << "Tu nivel de vida ahora es de " << salud << ".\n";
-                            cin.ignore.get();
+                            cin.ignore().get();
                         } else {
                             system("clear");
                             cout << "Opción inválida. Bowser te ataca mientras dudás.\n";
@@ -417,3 +417,4 @@ _..-`:.:'          ||vv||'''''"-----.._ _ _    `:.6.:'
 
     return 0;
 }
+
