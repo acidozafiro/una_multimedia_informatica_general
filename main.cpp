@@ -307,9 +307,9 @@ _  ---    ____               °°´´ --__    --    --__     -___        __-   _
 
                 do{
                         cout << "\n¡Tenés una segunda oportunidad!\n";
-                        cout << "¿Cuál es tu próximo ataque? Elegí una de las opciones\n";
+                        cout << "¿Cuál es tu próximo ataque? Elegí una de las opciones\n\n";
                         cout << "1. Convertirte en Fire Mario y lanzar una bola de fuego\n";
-                        cout << "2. Pegarle a Bowser con la flor\n";
+                        cout << "2. Pegarle a Bowser con la flor\n\n";
                         cout << "Elegí una opción: ";
                         cin >> decision;
                         if (decision == 1) {
